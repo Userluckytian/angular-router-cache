@@ -12,9 +12,13 @@
   <font size=2 color="gray">⭐tip1：目前只引入了中、英文两种语言服务！，如需修改，参见[支持语言](https://ng.ant.design/docs/i18n/zh#%E6%94%AF%E6%8C%81%E8%AF%AD%E8%A8%80)  
   </font>  
 2. 引入新的语言方式：比如引入日语：
+
    - 找到`import { en_US, NZ_I18N, zh_CN } from 'ng-zorro-antd/i18n';` 
-   - 从[支持语言](https://ng.ant.design/docs/i18n/zh#%E6%94%AF%E6%8C%81%E8%AF%AD%E8%A8%80)中找到日语对应的值：`ja_JP` 
+
+   - 从[支持语言](https://ng.ant.design/docs/i18n/zh#%E6%94%AF%E6%8C%81%E8%AF%AD%E8%A8%80)中找到日语对应的值：`ja_JP`  
+  
    - 修改1为：`import { en_US, NZ_I18N, zh_CN, ja_JP } from 'ng-zorro-antd/i18n';`
+
    - 增加如下代码:
 
          ```javascript
