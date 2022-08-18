@@ -8,6 +8,9 @@ import { RouteStrategyService } from './services/route-strategy.service';
 
 // 语言服务
 import { I18NConfigProvider } from './I18NConfig(✔)/I18N.config';
+import { HeaderComponent } from './layout/components/header/header.component';
+import { SidebarComponent } from './layout/components/sidebar/sidebar.component';
+import { zorroModule } from './third_lib/Zorro/zorro_Modules';
 // zorro的全局配置服务
 // import { ngZorroConfigProvider } from './GlobalConfig(unFinish)/global.config';
 
@@ -15,9 +18,12 @@ import { I18NConfigProvider } from './I18NConfig(✔)/I18N.config';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    SidebarComponent
   ],
   imports: [
+    zorroModule,
     BrowserModule,
     AppRoutingModule
   ],

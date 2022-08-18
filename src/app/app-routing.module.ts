@@ -5,12 +5,12 @@ const routes: Routes = [
   {
     path: 'suzhou',
     data: {reuse: true},
-    loadChildren: () => import('./suzhou-comp/suzhou-comp.module').then(m => m.SuzhouCompModule),
+    loadChildren: () => import('./business/suzhou-comp/suzhou-comp.module').then(m => m.SuzhouCompModule),
   },
   {
     path: 'zhengzhou',
     data: {reuse: true},
-    loadChildren: () => import('./zhengzhou-comp/zhengzhou-comp.module').then(m => m.ZhengzhouCompModule),
+    loadChildren: () => import('./business/zhengzhou-comp/zhengzhou-comp.module').then(m => m.ZhengzhouCompModule),
   },
   {
     path: '',
