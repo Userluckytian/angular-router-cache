@@ -6,12 +6,12 @@ import { ZhengzhouListComponent } from './components/zhengzhou-list/zhengzhou-li
 const routes: Routes = [
   {
     path: 'list',
-    data: { reuse: true },
+    data: { title: '郑-列表', cache: true },
     component: ZhengzhouListComponent
   },
   {
     path: 'detail',
-    data: { reuse: true },
+    data: { title: '郑-详情', cache: true },
     component: ZhengzhouDetailComponent
   },
   {

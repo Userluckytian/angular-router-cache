@@ -1,0 +1,17 @@
+<nz-tabset [nzAnimated]="true" [nzSelectedIndex]="currentIndex" (nzSelectChange)="nzSelectChange($event)"
+  [nzType]="'card'">
+  <nz-tab *ngFor="let menu of menuList" [nzTitle]="nzTabHeading">
+    <ng-template #nzTabHeading>
+      <div class="menuTitle">
+        <span>
+          {{menu.title}}
+        </span>
+        <i *ngIf="menuList.length > 1" nz-icon nzType="close" nzTheme="outline" (click)="closeUrl(menu.url)"></i>
+      </div>
+    </ng-template>
+  </nz-tab>
+</nz-tabset>
+<div class="tab-content">
+  <!--路由的内容会被显示在这里-->
+  <ng-content></ng-content>
+</div>

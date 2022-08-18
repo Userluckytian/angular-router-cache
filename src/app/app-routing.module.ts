@@ -4,12 +4,12 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: 'suzhou',
-    data: {reuse: true},
+    data: { title: '测试-苏', cache: true },
     loadChildren: () => import('./business/suzhou-comp/suzhou-comp.module').then(m => m.SuzhouCompModule),
   },
   {
     path: 'zhengzhou',
-    data: {reuse: true},
+    data: { title: '测试-郑', cache: true },
     loadChildren: () => import('./business/zhengzhou-comp/zhengzhou-comp.module').then(m => m.ZhengzhouCompModule),
   },
   {

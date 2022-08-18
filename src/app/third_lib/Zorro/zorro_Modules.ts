@@ -10,6 +10,7 @@ import { NzInputModule } from 'ng-zorro-antd/input';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzSpinModule } from 'ng-zorro-antd/spin';
 import { NzDividerModule } from 'ng-zorro-antd/divider';
+import { NzTabsModule } from 'ng-zorro-antd/tabs';
 /*
     引入你需要的图标，推荐 ✔️
     Zorro：http://ng.ant.design/components/icon/zh#%E9%9D%99%E6%80%81%E5%8A%A0%E8%BD%BD%E4%B8%8E%E5%8A%A8%E6%80%81%E5%8A%A0%E8%BD%BD
@@ -21,14 +22,17 @@ import { NzDividerModule } from 'ng-zorro-antd/divider';
 */ 
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { IconDefinition } from '@ant-design/icons-angular';
-import { UserOutline, LockOutline } from '@ant-design/icons-angular/icons';
+import { UserOutline, LockOutline, AppstoreOutline, CloseOutline } from '@ant-design/icons-angular/icons';
 // 存放图标
 const icons: IconDefinition[] = [ 
     UserOutline, 
     LockOutline,
+    AppstoreOutline,
+    CloseOutline,
 ];
 // 存放Module
 const zorroModule = [
+    NzTabsModule,
     NzDividerModule,
     NzSpinModule,
     NzInputModule,

@@ -6,12 +6,12 @@ import { SuzhouListComponent } from './components/suzhou-list/suzhou-list.compon
 const routes: Routes = [
   {
     path: 'list',
-    data: { reuse: true },
+    data: { title: '苏-列表', cache: true },
     component: SuzhouListComponent
   },
   {
     path: 'detail',
-    data: { reuse: true },
+    data: { title: '苏-详情', cache: true },
     component: SuzhouDetailComponent
   },
   {

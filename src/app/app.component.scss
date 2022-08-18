@@ -1,12 +1,18 @@
-.top{
-    width: 100%;
-    max-height: 60px;
+.top {
+  width: 100%;
+  max-height: 50px;
 }
-.bottom{
-    display: flex;
-    flex: 1;
-    .menu{
-        width: 240px;
-        height: calc(100vh - 60px);
-    }
+.bottom {
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 50px);
+  flex: 1;
+  .menu {
+    width: 240px;
+    height: 100%;
+  }
+  .content {
+    height: 100%;
+    width: calc(100vw - 240px);
+  }
 }

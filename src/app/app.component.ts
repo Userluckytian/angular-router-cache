@@ -6,11 +6,4 @@ import { NavigationEnd, Router } from '@angular/router';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'angular-router-cache';
-  constructor(
-    private router: Router
-  ) {
-  }
-
-}
+export class AppComponent {}

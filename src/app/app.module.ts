@@ -5,12 +5,14 @@ import { RouteReuseStrategy } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RouteStrategyService } from './services/route-strategy.service';
-
+import { zorroModule } from './third_lib/Zorro/zorro_Modules';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 // 语言服务
 import { I18NConfigProvider } from './I18NConfig(✔)/I18N.config';
 import { HeaderComponent } from './layout/components/header/header.component';
 import { SidebarComponent } from './layout/components/sidebar/sidebar.component';
-import { zorroModule } from './third_lib/Zorro/zorro_Modules';
+import { RouterTabComponent } from './layout/components/router-tab/router-tab.component';
+import { HttpClientModule } from '@angular/common/http';
 // zorro的全局配置服务
 // import { ngZorroConfigProvider } from './GlobalConfig(unFinish)/global.config';
 
@@ -20,12 +22,15 @@ import { zorroModule } from './third_lib/Zorro/zorro_Modules';
   declarations: [
     AppComponent,
     HeaderComponent,
-    SidebarComponent
+    SidebarComponent,
+    RouterTabComponent
   ],
   imports: [
     zorroModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
   ],
   providers: [
     I18NConfigProvider,
