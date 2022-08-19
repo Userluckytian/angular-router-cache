@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ZhengzhouDetailComponent implements OnInit {
 
+  zhengzhoudetailSerachKey: string = '';
+
   constructor() { }
 
   ngOnInit() {

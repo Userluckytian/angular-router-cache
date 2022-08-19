@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SuzhouListComponent implements OnInit {
 
+  suzhouSearchKey: string = '';
+  
   constructor() { }
 
   ngOnInit() {
