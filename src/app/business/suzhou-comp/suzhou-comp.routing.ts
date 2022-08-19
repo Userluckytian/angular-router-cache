@@ -5,18 +5,18 @@ import { SuzhouListComponent } from './components/suzhou-list/suzhou-list.compon
 
 const routes: Routes = [
   {
-    path: 'list',
-    data: { title: '苏-列表', cache: true },
+    path: 'szlist',
+    data: { title: '苏-列表', reuse: true, key: 'szlist' },
     component: SuzhouListComponent
   },
   {
-    path: 'detail',
-    data: { title: '苏-详情', cache: true },
+    path: 'szdetail',
+    data: { title: '苏-详情', reuse: true, key: 'szdetail' },
     component: SuzhouDetailComponent
   },
   {
     path: '',
-    redirectTo: 'list',
+    redirectTo: 'szlist',
     pathMatch: 'full'
   }
 ];

@@ -5,18 +5,18 @@ import { ZhengzhouListComponent } from './components/zhengzhou-list/zhengzhou-li
 
 const routes: Routes = [
   {
-    path: 'list',
-    data: { title: '郑-列表', cache: true },
+    path: 'zzlist',
+    data: { title: '郑-列表', reuse: true, key: 'zzlist' },
     component: ZhengzhouListComponent
   },
   {
-    path: 'detail',
-    data: { title: '郑-详情', cache: true },
+    path: 'zzdetail',
+    data: { title: '郑-详情', reuse: true, key: 'zzdetail' },
     component: ZhengzhouDetailComponent
   },
   {
     path: '',
-    redirectTo: 'list',
+    redirectTo: 'zzlist',
     pathMatch: 'full'
   }
 ];

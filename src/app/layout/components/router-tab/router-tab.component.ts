@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { Router, ActivatedRoute, NavigationEnd, ActivatedRouteSnapshot } from '@angular/router';
-import { NzTabComponent } from 'ng-zorro-antd/tabs';
-import { filter, map, mergeMap, of } from 'rxjs';
+import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
+import { filter, map, mergeMap } from 'rxjs';
 import { RouteStrategyService } from 'src/app/services/route-strategy.service';
 
 @Component({
@@ -15,7 +14,7 @@ export class RouterTabComponent implements OnInit {
   // 路由列表
   menuList: any = [];
   // 当前选择的tab index
-  currentIndex = -1;
+  currentIndex = 0;
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
@@ -44,7 +43,6 @@ export class RouterTabComponent implements OnInit {
       filter(route => route.outlet === 'primary'),
       mergeMap(route => route.data)
     ).subscribe((event: any) => {
-      console.log('🚀 ~ event', event);
       // 路由data的标题
       const menu = { ...event };
       menu.url = this.router.url
@@ -86,7 +84,7 @@ export class RouterTabComponent implements OnInit {
    * tab发生改变
    */
   nzSelectChange($event: any) {
-    this.currentIndex = $event.index || -1;
+    this.currentIndex = $event.index ?? -1;
     const menu = this.menuList[this.currentIndex];
     // 跳转路由
     if (menu) {

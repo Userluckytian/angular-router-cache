@@ -1,19 +1,20 @@
 <div class="sidebar">
   <ul nz-menu nzMode="inline">
+    <li nz-menu-item nzSelected  (click)="tabs('overview')">总览页面</li>
     <li nz-submenu nzTitle="系统管理" nzIcon="mail">
       <ul>
-        <li nz-menu-item (click)="tabs('suzhou/list')">苏-列表</li>
-        <li nz-menu-item (click)="tabs('suzhou/detail')">苏-详情</li>
+        <li nz-menu-item (click)="tabs('suzhou/szlist')">苏-列表</li>
+        <li nz-menu-item (click)="tabs('suzhou/szdetail')">苏-详情</li>
       </ul>
     </li>
     <li nz-submenu nzTitle="管理系统" nzIcon="appstore">
       <ul>
-        <li nz-menu-item (click)="tabs('zhengzhou/list')">郑-列表</li>
+        <li nz-menu-item (click)="tabs('zhengzhou/zzlist')">郑-列表</li>
       </ul>
     </li>
     <li nz-submenu nzTitle="管系统理" nzIcon="setting">
       <ul>
-        <li nz-menu-item (click)="tabs('zhengzhou/detail')">郑-详情</li>
+        <li nz-menu-item (click)="tabs('zhengzhou/zzdetail')">郑-详情</li>
       </ul>
     </li>
   </ul>
