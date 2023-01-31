@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
+import { Router, ActivatedRoute, NavigationEnd, ActivatedRouteSnapshot } from '@angular/router';
 import { filter, map, mergeMap } from 'rxjs';
-import { RouteStrategyService } from 'src/app/services/route-strategy.service';
+import { MaltsevRouteReuseStrategy } from 'src/app/services/route-strategy.service.(✔)';
 
 @Component({
   selector: 'app-router-tab',
   templateUrl: './router-tab.component.html',
-  styleUrls: ['./router-tab.component.scss']
+  styleUrls: ['./router-tab.component.scss'],
 })
 export class RouterTabComponent implements OnInit {
 
@@ -18,7 +18,7 @@ export class RouterTabComponent implements OnInit {
   constructor(
     private router: Router,
     private activatedRoute: ActivatedRoute,
-    private titleService: Title
+    private titleService: Title,
   ) {
     this.onNavigationEnd();
   }
@@ -67,7 +67,8 @@ export class RouterTabComponent implements OnInit {
     this.menuList.splice(index, 1);
     setTimeout(() => {
       // 删除复用
-      RouteStrategyService.deleteRouteSnapshot(url)
+      const delUrl = url.slice(1);
+      MaltsevRouteReuseStrategy.deleteRouteSnapshot(delUrl)
     }, 0);
     // 如果当前删除的对象是当前选中的，那么需要跳转
     if (this.currentIndex === index) {
