@@ -106,10 +106,6 @@ export class MaltsevRouteReuseStrategy implements RouteReuseStrategy {
    * @memberof RouteStrategyService
    */
   static deleteRouteSnapshot(key: string): void {
-    const mapColl = MaltsevRouteReuseStrategy.routeCache;
-    console.log(mapColl);
-    console.log(Object.keys(mapColl));
-    
     if (MaltsevRouteReuseStrategy.routeCache.has(key)) {
       const handle: any = (MaltsevRouteReuseStrategy.routeCache.get(key) as ICachedRoute).handle;
       try {
