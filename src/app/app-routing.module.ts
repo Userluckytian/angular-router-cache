@@ -10,12 +10,12 @@ const routes: Routes = [
   },
   {
     path: 'suzhou',
-    data: { title: '测试-苏', reuse: true, key: 'suzhou' },
+    data: { title: '测试-苏', reuse: false, key: 'suzhou' },
     loadChildren: () => import('./business/suzhou-comp/suzhou-comp.module').then(m => m.SuzhouCompModule),
   },
   {
     path: 'zhengzhou',
-    data: { title: '测试-郑', reuse: true, key: 'zhengzhou' },
+    data: { title: '测试-郑', reuse: false, key: 'zhengzhou' },
     loadChildren: () => import('./business/zhengzhou-comp/zhengzhou-comp.module').then(m => m.ZhengzhouCompModule),
   },
   {
