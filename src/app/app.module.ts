@@ -16,7 +16,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouteStrategyTempService } from './services/route-strategy.service.temp';
 import { CustomReuseTestStrategy } from './services/route-strategy.test.service';
 // zorro的全局配置服务
-// import { ngZorroConfigProvider } from './GlobalConfig(unFinish)/global.config';
+import { ngZorroConfigProvider } from './GlobalConfig(unFinish)/global.config';
 
 
 
@@ -36,7 +36,7 @@ import { CustomReuseTestStrategy } from './services/route-strategy.test.service'
   ],
   providers: [
     I18NConfigProvider,
-    // ngZorroConfigProvider,
+    ngZorroConfigProvider,
     // { provide: RouteReuseStrategy, useClass: RouteStrategyService }, // 参考：https://blog.csdn.net/qq_41243979/article/details/121524814
     // { provide: RouteReuseStrategy, useClass: RouteStrategyTempService }, // 参考：https://blog.csdn.net/qq_41243979/article/details/121524814
     { provide: RouteReuseStrategy, useClass: CustomReuseTestStrategy }, // 参考：https://stackblitz.com/edit/angular-ivy-zvzxuq?file=src%2Fapp%2Fapp.component.ts
